@@ -6,24 +6,23 @@
 
 
 from typing import Tuple
-
-
+checking = 1590.80 
+savings = 1096.25
 
 def process_transaction(transaction):
     checking = 1590.80
-    savings = 1096.25
+    savings = 1096.25 
     if transaction > 0:
         checking += (transaction * 0.85)
         savings += (transaction * 0.15)
-    elif transaction <0:
+    elif transaction <0: 
         checking += transaction
     else:
         print("No change to your account")
 def saturdays_bank_transactions(transations) -> Tuple[float, float]:
     for charge in transations:
         process_transaction(charge)
-    return (checking, savings)
-    
+    return (checking, savings)    
 
 if __name__ == "__main__":
     transations = [300.00, -50.00, -5.00, -20, 15.72, 2083.93, -1034.00, -420.00, -5.23, -15.93, -72.90]
