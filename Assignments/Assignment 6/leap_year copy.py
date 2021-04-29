@@ -8,15 +8,23 @@ def leap_year(year):
     """
     # Write your code here. 
 
+if __name__ == "__main__":
+    years = [2000, 1994, 1912, 3002, 1700, 1400]
+    answers = []
+    for year in years:
+        answers.append(leap_year(year))
+    
+    print(answers)  
 
-num = int(input("enter a year: ")) 
-if (num % 4) == 0:
-   if (num % 100) == 0:
-       if (num % 400) == 0:
-           print("{0} is a leap year".format(num))
+years = int(input("enter a year: ")) 
+if (years % 4) == 0:
+   if (years % 100) == 0:
+       if (years % 400) == 0:
+           print("{0} is a leap year".format(years))
        else:
-           print("{0} is not a leap year".format(num))
+           print("{0} is not a leap year".format(years))
    else:
-       print("{0} is a leap year".format(num))
+       print("{0} is a leap year".format(years))
 else:
-   print("{0} is not a leap year".format(num)) 
+   print("{0} is not a leap year".format(years)) 
+
